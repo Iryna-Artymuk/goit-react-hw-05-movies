@@ -11,9 +11,9 @@ const MoviesList = ({ data }) => {
         }}
       >
         {data.map(({ title, id }) => (
-          <Link to={`${id}`} key={id}>
-            {title}
-          </Link>
+          <li key={id}>
+            <Link to={`${id}`}>{title}</Link>
+          </li>
         ))}
       </ul>
     </div>

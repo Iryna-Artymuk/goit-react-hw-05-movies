@@ -18,7 +18,7 @@ const MovieDetails = () => {
       });
   }, [movieId, setMovieInfo]);
   //   console.log(error);
-  //   console.log(movieInfo);
+
   const Img_url = 'https://image.tmdb.org/t/p/w500';
   return (
     <>

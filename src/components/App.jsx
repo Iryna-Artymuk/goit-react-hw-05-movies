@@ -1,6 +1,9 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import HomePage from '../Pages/Home';
+import Movies from '../Pages/Movie';
 import Cast from '../components/Cast';
+import Reviews from '../components/Reviews';
+
 import MovieDetails from './MovieDetails';
 const App = () => {
   return (
@@ -13,27 +16,12 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route
-          path="/movies"
-          element={
-            <div style={{ width: '50vw', height: '50vh', background: 'green' }}>
-              <h2> here will be search form </h2>
-            </div>
-          }
-        />
+        <Route path="/movies" element={<Movies />} />
 
-        <Route path="/:movieId" element={<MovieDetails />}>
+        <Route path="/:movieId" element={<MovieDetails />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />}>
           <Route path="cast" element={<Cast />} />
-          <Route
-            path="reviews"
-            element={
-              <div
-                style={{ width: '20vw', height: '20vh', background: 'pink' }}
-              >
-                <h2> here will be cast</h2>
-              </div>
-            }
-          />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
       </Routes>
     </>

@@ -5,7 +5,7 @@ axios.defaults.params = {
   api_key: KEY,
 };
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
-export async function GetMovies(searchValue, page) {
+export async function GetMovies() {
   const { data } = await axios.get(`trending/movie/day`);
 
   return data;
@@ -19,6 +19,18 @@ export async function GetMoviesDetails(movieId) {
 
 export async function GetCast(movieId) {
   const { data } = await axios.get(`/movie/${movieId}/credits`);
+
+  return data;
+}
+
+export async function GetReviews(movieId) {
+  const { data } = await axios.get(`/movie/${movieId}/reviews`);
+
+  return data;
+}
+
+export async function searchMovie(searchValue, page) {
+  const { data } = await axios.get(`/search/movie?query=${searchValue}`);
 
   return data;
 }
