@@ -30,7 +30,9 @@ export async function GetReviews(movieId) {
 }
 
 export async function searchMovie(searchValue, page) {
-  const { data } = await axios.get(`/search/movie?query=${searchValue}`);
+  const { data } = await axios.get(
+    `/search/movie?query=${searchValue}&page=${page}`
+  );
 
   return data;
 }
