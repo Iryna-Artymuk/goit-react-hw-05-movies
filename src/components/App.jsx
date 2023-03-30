@@ -1,4 +1,5 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import SharedLayout from './SharedLayout';
 import HomePage from '../Pages/Home';
 import Movies from '../Pages/Movie';
 import Cast from '../components/Cast';
@@ -8,21 +9,22 @@ import MovieDetails from './MovieDetails';
 const App = () => {
   return (
     <>
-      <nav>
-        <NavLink to="/"> Home</NavLink>
-        <br />
-        <NavLink to="/movies"> Movies</NavLink>
-      </nav>
-
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
 
-        <Route path="/:movieId" element={<MovieDetails />} />
+          <Route path="/movies" element={<Movies />} />
+        </Route>
+
+        <Route path="/:movieId" element={<MovieDetails />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
         <Route path="/movies/:movieId" element={<MovieDetails />}>
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<p>Page not found(</p>} />
       </Routes>
     </>
   );
