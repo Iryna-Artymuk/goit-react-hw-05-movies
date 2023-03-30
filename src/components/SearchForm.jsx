@@ -1,33 +1,40 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import Button from '../components/Button/Button';
 const SearchForm = ({ handelSubmit }) => {
-  const [inputValue, setInputValue] = useState('');
+  //   const [inputValue, setInputValue] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get('query') ?? '';
 
-  // оновлюєм стейт коли вводимо значення в інпут
-  const handelInputChange = ({ currentTarget }) => {
-    setInputValue(currentTarget.value);
+  const updateQueryString = ({ target }) => {
+    const nextParams = { query: target.value };
+    console.log(query);
+    // console.log(currentTarget.value);
+    console.log(nextParams);
+    setSearchParams(nextParams);
   };
   // по сабміту форми відправляєм значеня в компонент App
   const handelFormSubmit = event => {
     event.preventDefault();
-    if (inputValue === '') {
+    // setSearchParams({ query: event.currentTarget.value });
+    if (query === '') {
       return toast.error('empty value type something', {
         theme: 'dark',
       });
     }
 
-    handelSubmit(inputValue);
+    handelSubmit(query);
 
-    setInputValue('');
+    // setInputValue('');
   };
 
   return (
     <form onSubmit={handelFormSubmit}>
       <input
-        value={inputValue}
-        onChange={handelInputChange}
+        value={query}
+        onChange={updateQueryString}
         type="text"
         autoComplete="off"
         autoFocus
