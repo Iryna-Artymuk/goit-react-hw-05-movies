@@ -1,5 +1,5 @@
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { GetMoviesDetails } from './Service/MovieApi';
 
 const MovieDetails = ({ from }) => {
