@@ -1,8 +1,9 @@
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+
 import { GetMoviesDetails } from './Service/MovieApi';
 
-const MovieDetails = ({ from }) => {
+const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState({});
   const [error, setError] = useState(null);
   const { movieId } = useParams();
@@ -49,7 +50,10 @@ const MovieDetails = ({ from }) => {
               </Link>
             </li>
           </ul>
-          <Outlet />
+
+          <Suspense fallback={<div>Loading2...</div>}>
+            <Outlet />
+          </Suspense>
         </>
       )}
     </>
