@@ -1,5 +1,5 @@
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { GetMoviesDetails } from './Service/MovieApi';
 
 const MovieDetails = ({ from }) => {
@@ -7,12 +7,16 @@ const MovieDetails = ({ from }) => {
   const [error, setError] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
+  console.log(location);
   const backLinkHref = location.state?.from ?? '/movies';
+  //  const backLinkHref =  useRef (location.state?.from ?? '/movies')
+  // than use  backLinkHref.current to get location object
   console.log(location.state);
   useEffect(() => {
     GetMoviesDetails(movieId)
       .then(moviesData => {
         console.log('use efect');
+
         setMovieInfo(moviesData);
         // console.log(moviesData.StatusCode);
       })
@@ -35,10 +39,14 @@ const MovieDetails = ({ from }) => {
           <img src={Img_url + movieInfo.poster_path} alt="" width={200} />
           <ul>
             <li>
-              <Link to="cast">Cast</Link>
+              <Link to="cast" state={{ from: backLinkHref }}>
+                Cast
+              </Link>
             </li>
             <li>
-              <Link to="reviews">Reviews</Link>
+              <Link to="reviews" state={{ from: backLinkHref }}>
+                Reviews
+              </Link>
             </li>
           </ul>
           <Outlet />
