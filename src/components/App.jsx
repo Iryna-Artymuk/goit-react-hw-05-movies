@@ -3,13 +3,15 @@ import { lazy } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import SharedLayout from './SharedLayout';
+import SharedLayout from '../components/SharedLayout/SharedLayout';
 
 const HomePage = lazy(() => import('../Pages/Home'));
 const Movies = lazy(() => import('../Pages/Movie'));
-const Cast = lazy(() => import('../components/Cast'));
-const Reviews = lazy(() => import('../components/Reviews'));
-const MovieDetails = lazy(() => import('./MovieDetails'));
+const Cast = lazy(() => import('../components/Cast/Cast'));
+const Reviews = lazy(() => import('../components/Reviews/Reviews'));
+const MovieDetails = lazy(() =>
+  import('../components/MovieDetails/MovieDetails')
+);
 // import HomePage from '../Pages/Home';
 // import Movies from '../Pages/Movie';
 // import Cast from '../components/Cast';

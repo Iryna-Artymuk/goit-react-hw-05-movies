@@ -1,7 +1,7 @@
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 
-import { GetMoviesDetails } from './Service/MovieApi';
+import { GetMoviesDetails } from '../Service/MovieApi';
 
 const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState({});

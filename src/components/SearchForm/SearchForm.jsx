@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { toast } from 'react-toastify';
 
-import Button from '../components/Button/Button';
+import Button from '../Button/Button';
 const SearchForm = ({ handelSubmit }) => {
   const [inputValue, setInputValue] = useState('');
 
