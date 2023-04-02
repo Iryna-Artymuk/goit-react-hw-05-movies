@@ -6,6 +6,9 @@ const Container = styled.div`
   /* width: 1200px; */
 `;
 const Header = styled.header`
+  position: sticky;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: center;
 

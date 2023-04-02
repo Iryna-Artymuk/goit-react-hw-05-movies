@@ -12,7 +12,6 @@ const MoviesList = ({ data }) => {
           <Link to={`${id}`} state={{ from: location }}>
             <img src={Img_url + poster_path} alt={title} />
             <h2> {title}</h2>
-            <p>{overview}</p>
           </Link>
         </Card>
       ))}
