@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.ba524287.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.5fcb4bdf.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.107efd8c.js",
     "static/js/6.1680682b.chunk.js": "/goit-react-hw-05-movies/static/js/6.1680682b.chunk.js",
     "static/js/880.82efc719.chunk.js": "/goit-react-hw-05-movies/static/js/880.82efc719.chunk.js",
     "static/js/247.f33554d6.chunk.js": "/goit-react-hw-05-movies/static/js/247.f33554d6.chunk.js",
     "static/js/186.155b6903.chunk.js": "/goit-react-hw-05-movies/static/js/186.155b6903.chunk.js",
-    "static/js/5.d263178b.chunk.js": "/goit-react-hw-05-movies/static/js/5.d263178b.chunk.js",
+    "static/js/5.0f1b5adc.chunk.js": "/goit-react-hw-05-movies/static/js/5.0f1b5adc.chunk.js",
     "static/js/279.968c5919.chunk.js": "/goit-react-hw-05-movies/static/js/279.968c5919.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.ba524287.css.map": "/goit-react-hw-05-movies/static/css/main.ba524287.css.map",
-    "main.5fcb4bdf.js.map": "/goit-react-hw-05-movies/static/js/main.5fcb4bdf.js.map",
+    "main.107efd8c.js.map": "/goit-react-hw-05-movies/static/js/main.107efd8c.js.map",
     "6.1680682b.chunk.js.map": "/goit-react-hw-05-movies/static/js/6.1680682b.chunk.js.map",
     "880.82efc719.chunk.js.map": "/goit-react-hw-05-movies/static/js/880.82efc719.chunk.js.map",
     "247.f33554d6.chunk.js.map": "/goit-react-hw-05-movies/static/js/247.f33554d6.chunk.js.map",
     "186.155b6903.chunk.js.map": "/goit-react-hw-05-movies/static/js/186.155b6903.chunk.js.map",
-    "5.d263178b.chunk.js.map": "/goit-react-hw-05-movies/static/js/5.d263178b.chunk.js.map",
+    "5.0f1b5adc.chunk.js.map": "/goit-react-hw-05-movies/static/js/5.0f1b5adc.chunk.js.map",
     "279.968c5919.chunk.js.map": "/goit-react-hw-05-movies/static/js/279.968c5919.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba524287.css",
-    "static/js/main.5fcb4bdf.js"
+    "static/js/main.107efd8c.js"
   ]
 }
