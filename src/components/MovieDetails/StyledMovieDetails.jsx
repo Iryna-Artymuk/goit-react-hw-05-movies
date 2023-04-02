@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const MovieCard = styled.div`
   position: relative;
   display: block;
-  width: 800px;
+  width: 90vw;
   height: fit-content;
 
   margin: 30px auto;
@@ -19,9 +19,8 @@ const MovieCard = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 95%;
     margin: 30px auto;
-    min-height: 350px;
+
     height: auto;
   }
 `;
@@ -112,24 +111,16 @@ const BackgroundImg = styled.div`
   height: 100%;
 
   background-size: cover;
-
+  background-repeat: no-repeat;
   border-radius: 11px;
   background: url(${props => props.url});
   @media screen and (max-width: 768px) {
     width: 100%;
-    background-position: -100% 10%;
   }
   @media screen and (min-width: 768px) {
     width: 50%;
     background-position: 50% 50%;
   }
-
-  height: 100%;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 11px;
-  background: url(${props => props.url});
 `;
 
 // @media screen and (max-width: 768px) {

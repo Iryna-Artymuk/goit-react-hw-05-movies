@@ -74,7 +74,7 @@ const MovieDetails = () => {
               </ul>
             </InfoSection>
             <BackgroundImg
-              url={Img_url + movieInfo.poster_path}
+              url={Img_url + movieInfo.backdrop_path}
             ></BackgroundImg>
           </MovieCard>
           <MovieCard>
