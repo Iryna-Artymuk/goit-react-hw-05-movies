@@ -47,6 +47,7 @@ const MovieHeader = styled.div`
   position: relative;
   padding: 25px;
   height: 40%;
+  font-size: 18px;
   @media screen and (min-width: 768px) {
     width: 65%;
   }
@@ -54,7 +55,8 @@ const MovieHeader = styled.div`
     width: 100%;
     margin-top: 85px;
   }
-  h1 {
+  h2 {
+    font-size: 24px;
     color: black;
     font-weight: 400;
   }
@@ -91,6 +93,7 @@ const Genres = styled.ul`
 const MovieDesc = styled.div`
   padding: 25px;
   height: 50%;
+  font-size: 18px;
   @media screen and (min-width: 768px) {
     width: 50%;
   }
