@@ -28,7 +28,7 @@ const MovieDetails = () => {
 
   const Img_url = 'https://image.tmdb.org/t/p/w500';
   console.log(movieInfo);
-  const { title, overview, genres, runtime, release_date } = movieInfo;
+  const { title, overview, runtime, release_date } = movieInfo;
   return (
     <>
       {error && <p>Something went wrong Try again later.😭</p>}
