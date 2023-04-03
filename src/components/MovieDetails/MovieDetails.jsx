@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 
 import { GetMoviesDetails } from '../Service/MovieApi';
@@ -10,6 +10,9 @@ import {
   Genres,
   MovieDesc,
   BackgroundImg,
+  AdditionDetailsList,
+  StyledLink,
+  InfoBox,
 } from './StyledMovieDetails';
 const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState({});
@@ -44,39 +47,41 @@ const MovieDetails = () => {
         <>
           <MovieCard id="bright">
             <InfoSection>
-              <Link to={backLinkHref}> Go Back </Link>
+              <StyledLink to={backLinkHref}> Go Back </StyledLink>
               <MovieHeader>
                 <img src={Img_url + movieInfo.poster_path} alt={title} />
-                <h1>{title}</h1>
-                <h4>{release_date}</h4>
-                <span>{runtime} min</span>
-                <Genres>
-                  {genres?.map((item, index) => (
-                    <li key={index}>{item.name}</li>
-                  ))}
-                </Genres>
+                <InfoBox>
+                  <h1>{title}</h1>
+                  <h4>{release_date}</h4>
+                  <span>{runtime} min</span>
+                  <Genres>
+                    {genres?.map((item, index) => (
+                      <li key={index}>{item.name}</li>
+                    ))}
+                  </Genres>
+                  <AdditionDetailsList>
+                    <li>
+                      <StyledLink to="cast" state={{ from: backLinkHref }}>
+                        Cast
+                      </StyledLink>
+                    </li>
+                    <li>
+                      <StyledLink to="reviews" state={{ from: backLinkHref }}>
+                        Reviews
+                      </StyledLink>
+                    </li>
+                  </AdditionDetailsList>
+                </InfoBox>
               </MovieHeader>
               <MovieDesc>
                 <p>{overview}</p>
               </MovieDesc>
-
-              <ul>
-                <li>
-                  <Link to="cast" state={{ from: backLinkHref }}>
-                    Cast
-                  </Link>
-                </li>
-                <li>
-                  <Link to="reviews" state={{ from: backLinkHref }}>
-                    Reviews
-                  </Link>
-                </li>
-              </ul>
             </InfoSection>
             <BackgroundImg
               url={Img_url + movieInfo.backdrop_path}
             ></BackgroundImg>
           </MovieCard>
+
           <MovieCard>
             <InfoSection>
               <Suspense fallback={<div>Loading2...</div>}>

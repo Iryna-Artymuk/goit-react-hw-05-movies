@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { List, Card } from './StyledMovie';
+
 const Img_url = 'https://image.tmdb.org/t/p/w500';
 
 const MoviesList = ({ data }) => {

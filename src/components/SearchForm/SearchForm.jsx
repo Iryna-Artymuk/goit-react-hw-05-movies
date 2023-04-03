@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import { toast } from 'react-toastify';
-
-import Button from '../Button/Button';
+import { Form, Input } from '../SearchForm/StyledSearchForm';
+// import Button from '../Button/Button';
 const SearchForm = ({ handelSubmit }) => {
   const [inputValue, setInputValue] = useState('');
 
@@ -26,19 +26,31 @@ const SearchForm = ({ handelSubmit }) => {
   };
 
   return (
-    <form onSubmit={handelFormSubmit}>
-      <input
+    // <Form onSubmit={handelFormSubmit}>
+    //   <input
+    //     type="search"
+    //     placeholder="Search..."
+    //     required
+    //     value={inputValue}
+    //     onChange={updateinputValue}
+    //     //       type="text"
+    //     autoComplete="off"
+    //     autoFocus
+    //   />
+    // </Form>
+
+    <Form onSubmit={handelFormSubmit}>
+      <Input
+        type="text"
+        placeholder="Search..."
+        required
         value={inputValue}
         onChange={updateinputValue}
-        type="text"
         autoComplete="off"
         autoFocus
-        placeholder="Search images and photos"
       />
-      <Button type="submit" SearchFormButton>
-        <span>Search</span>
-      </Button>
-    </form>
+      <button type="submit">Search</button>
+    </Form>
   );
 };
 

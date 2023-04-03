@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 // const  MovieHeader = styled.div``
-
+import { Link } from 'react-router-dom';
 const MovieCard = styled.div`
   position: relative;
+
   display: block;
   width: 90vw;
   height: fit-content;
@@ -28,6 +29,7 @@ const MovieCard = styled.div`
 const InfoSection = styled.div`
   position: relative;
   width: 100%;
+
   @media screen and (min-width: 768px) {
     background: linear-gradient(to right, #e5e6e6 50%, transparent 100%);
   }
@@ -45,9 +47,11 @@ const InfoSection = styled.div`
 
 const MovieHeader = styled.div`
   position: relative;
+
   padding: 25px;
   height: 40%;
   font-size: 18px;
+  height: fit-content;
   @media screen and (min-width: 768px) {
     width: 65%;
   }
@@ -69,6 +73,7 @@ const MovieHeader = styled.div`
     float: left;
     margin-right: 20px;
     height: 100px;
+
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
     span {
       display: inline-block;
@@ -80,7 +85,11 @@ const MovieHeader = styled.div`
     }
   }
 `;
-
+const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
 const Genres = styled.ul`
   display: flex;
 
@@ -91,8 +100,8 @@ const Genres = styled.ul`
 `;
 
 const MovieDesc = styled.div`
-  padding: 25px;
   height: 50%;
+  padding-left: 25px;
   font-size: 18px;
   @media screen and (min-width: 768px) {
     width: 50%;
@@ -114,7 +123,7 @@ const BackgroundImg = styled.div`
   height: 100%;
 
   background-size: cover;
-  background-repeat: no-repeat;
+
   border-radius: 11px;
   background: url(${props => props.url});
   @media screen and (max-width: 768px) {
@@ -126,17 +135,17 @@ const BackgroundImg = styled.div`
   }
 `;
 
-// @media screen and (max-width: 768px) {
+const AdditionDetailsList = styled.ul`
+  display: flex;
+  gap: 10px;
+`;
+const StyledLink = styled(Link)`
+  padding: 3px 5px;
 
-//   .info_section{
-//     background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
-//     display: inline-grid;
-//   }
-// }
-
-// .bright_back{
-//   background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
-// }
+  background: #f8f3e8;
+  color: #f50930;
+  border-radius: 4px;
+`;
 
 export {
   MovieCard,
@@ -145,4 +154,7 @@ export {
   Genres,
   MovieDesc,
   BackgroundImg,
+  AdditionDetailsList,
+  StyledLink,
+  InfoBox,
 };

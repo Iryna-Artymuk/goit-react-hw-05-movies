@@ -55,10 +55,11 @@ const Movies = () => {
       {movies && (
         <>
           <MoviesList data={movies} />
-          <Button type="button" onClick={handelClick}>
-            {' '}
-            Load More{' '}
-          </Button>
+          {movies.length > 0 && (
+            <Button type="button" onClick={handelClick}>
+              Load More{' '}
+            </Button>
+          )}
         </>
       )}
     </>
