@@ -16,6 +16,7 @@ const HomePage = () => {
         setMovies(MoviesData.results);
       } catch (Error) {
         setError(Error.message);
+        console.log(Error.message);
       } finally {
         // setLoading(false);
       }
@@ -26,7 +27,7 @@ const HomePage = () => {
   return (
     <>
       {error && <Error />}
-      {movies && <MoviesList data={movies} />}
+      {movies && <MoviesList data={movies} path="movies/" />}
     </>
   );
 };

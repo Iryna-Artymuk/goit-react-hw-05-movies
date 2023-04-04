@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Styledbutton = styled.button`
   background: ${props => {
-    console.log(props);
+    // console.log(props);
     if (props.ButtonType === 'SearchFormButton') {
       return ' #f88397';
     }

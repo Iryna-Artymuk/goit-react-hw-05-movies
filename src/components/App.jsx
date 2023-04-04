@@ -9,9 +9,7 @@ const HomePage = lazy(() => import('../Pages/Home'));
 const Movies = lazy(() => import('../Pages/Movie'));
 const Cast = lazy(() => import('../components/Cast/Cast'));
 const Reviews = lazy(() => import('../components/Reviews/Reviews'));
-const MovieDetails = lazy(() =>
-  import('../components/MovieDetails/MovieDetails')
-);
+const MovieDetails = lazy(() => import('../Pages/MovieDetails/MovieDetails'));
 // import HomePage from '../Pages/Home';
 // import Movies from '../Pages/Movie';
 // import Cast from '../components/Cast';
@@ -24,14 +22,21 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-
           <Route path="/movies" element={<Movies />} />
-
-          <Route path="/:movieId" element={<MovieDetails />}>
+          {/* <Route path="/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
+          // раніше MovieDetails був компонентом перенесла його на сторінку
+          //тепер щоб він рендерився по одному маршруту  movies/:movieId на сторінках home i movie  
+          // в на сторінку home в список вільмів треба передати маршрут по якому рендерити  MovieDetails  
+          // path="movies/" 
+          //і в списку фільмів зробити комбінований шлях   
+           <Link to={`${path ?? ''}${id}`} state={{ from: location }}>
+           ?? ''  означає якщо на пропс не пердали як у випадку з   <MoviesList data={movies} />} насторінці page
+           // записати пустий рядок 
+          */}
+          <Route path="movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>

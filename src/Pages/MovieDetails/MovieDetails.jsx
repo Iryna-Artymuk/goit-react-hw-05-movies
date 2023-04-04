@@ -1,7 +1,7 @@
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 
-import { GetMoviesDetails } from '../Service/MovieApi';
+import { GetMoviesDetails } from '../../components/Service/MovieApi';
 
 import {
   MovieCard,
