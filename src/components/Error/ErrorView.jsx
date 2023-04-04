@@ -1,11 +1,11 @@
 import errorImage from './errorImage.png';
-function ErrorView({ text }) {
+function Error({ text }) {
   console.log(text);
   return (
     <div
       style={{
-        width: '50wv',
-        heidht: '50wv',
+        width: 600,
+        height: 300,
         display: 'flex',
         flexDirection: 'column',
         gap: 10,
@@ -17,9 +17,9 @@ function ErrorView({ text }) {
       }}
     >
       <p>{`We are sorry, something went wrong try again`}</p>
-      <img src={errorImage} width="100%" alt="error" />
+      <img src={errorImage} width="80%" alt="error" />
     </div>
   );
 }
 
-export default ErrorView;
+export default Error;

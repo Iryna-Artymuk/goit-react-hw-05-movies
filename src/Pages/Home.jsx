@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { GetMovies } from '../components/Service/MovieApi';
 
 import MoviesList from '../components/MoviesList/MoviesList';
+import Error from '../components/Error/ErrorView';
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  //   const [error, setError] = useState([]);
+  const [error, setError] = useState(null);
   //   console.log(movies);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const HomePage = () => {
 
         setMovies(MoviesData.results);
       } catch (Error) {
-        // setError(Error.message);
+        setError(Error.message);
       } finally {
         // setLoading(false);
       }
@@ -22,7 +23,12 @@ const HomePage = () => {
     getMovies();
   }, []);
 
-  return <>{movies && <MoviesList data={movies} />}</>;
+  return (
+    <>
+      {error && <Error />}
+      {movies && <MoviesList data={movies} />}
+    </>
+  );
 };
 
 export default HomePage;

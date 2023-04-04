@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import MoviesList from '../components/MoviesList/MoviesList';
+import Error from '../components/Error/ErrorView';
+
 import { searchMovie } from '../components/Service/MovieApi';
 
 import SearchForm from '../components/SearchForm/SearchForm';
@@ -51,7 +53,7 @@ const Movies = () => {
   return (
     <>
       <SearchForm handelSubmit={handelSubmit} />
-      {error && <p>Something went wrong Try again later.😭</p>}
+      {error && <Error />}
       {movies && (
         <>
           <MoviesList data={movies} />
