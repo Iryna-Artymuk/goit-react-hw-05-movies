@@ -11,7 +11,6 @@ const MoviesList = ({ data, path }) => {
       {data.map(({ title, id, poster_path, overview }, index) => (
         <Card key={index}>
           <Link to={`${path ?? ''}${id}`} state={{ from: location }}>
-            {/* <LinkStyled to={`${linkTo ?? ''}${id}`} state={{ from: location }}></LinkStyled> */}
             <img src={Img_url + poster_path} alt={title} />
             <h2> {title}</h2>
           </Link>
