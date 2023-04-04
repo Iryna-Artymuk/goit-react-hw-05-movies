@@ -5,7 +5,7 @@ const MovieCard = styled.div`
   position: relative;
 
   display: block;
-  width: 90vw;
+  width: 80vw;
   height: fit-content;
 
   margin: 30px auto;
@@ -130,7 +130,7 @@ const BackgroundImg = styled.div`
     width: 100%;
   }
   @media screen and (min-width: 768px) {
-    width: 50%;
+    width: 40%;
     background-position: 50% 50%;
   }
 `;
