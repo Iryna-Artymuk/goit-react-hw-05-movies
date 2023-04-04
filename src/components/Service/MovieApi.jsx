@@ -1,4 +1,3 @@
-// api_key: 'e55542ecb6aab3d889d16953eac82937'
 import axios from 'axios';
 const KEY = 'e55542ecb6aab3d889d16953eac82937';
 axios.defaults.params = {

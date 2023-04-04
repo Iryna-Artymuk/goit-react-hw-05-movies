@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { toast } from 'react-toastify';
 import { Form, Input } from '../SearchForm/StyledSearchForm';
-// import Button from '../Button/Button';
+import Button from '../Button/Button';
 const SearchForm = ({ handelSubmit }) => {
   const [inputValue, setInputValue] = useState('');
 
@@ -26,19 +26,6 @@ const SearchForm = ({ handelSubmit }) => {
   };
 
   return (
-    // <Form onSubmit={handelFormSubmit}>
-    //   <input
-    //     type="search"
-    //     placeholder="Search..."
-    //     required
-    //     value={inputValue}
-    //     onChange={updateinputValue}
-    //     //       type="text"
-    //     autoComplete="off"
-    //     autoFocus
-    //   />
-    // </Form>
-
     <Form onSubmit={handelFormSubmit}>
       <Input
         type="text"
@@ -49,7 +36,9 @@ const SearchForm = ({ handelSubmit }) => {
         autoComplete="off"
         autoFocus
       />
-      <button type="submit">Search</button>
+      <Button type="submit" buttonType="SearchFormButton">
+        Search
+      </Button>
     </Form>
   );
 };

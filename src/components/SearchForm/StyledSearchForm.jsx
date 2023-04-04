@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 const Form = styled.form`
   display: flex;
+  /* justify-content: center; */
+  gap: 1%;
   flex-wrap: wrap;
   width: 100%;
   padding: 10px;
@@ -10,14 +12,6 @@ const Form = styled.form`
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
   margin-top: 10px;
-
-  button {
-    background: #f88397;
-    border-radius: 5px;
-    color: white;
-    width: 30%;
-    box-shadow: 0 0.75rem 0.5rem -0.5rem hsl(0 50% 80%);
-  }
 `;
 
 const Input = styled.input`
@@ -25,7 +19,7 @@ const Input = styled.input`
   background: hsl(0 0% 93%);
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
-  width: 70%;
+  width: 80%;
   border-radius: 5px;
 `;
 

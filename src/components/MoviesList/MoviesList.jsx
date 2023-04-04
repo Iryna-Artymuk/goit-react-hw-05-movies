@@ -5,7 +5,7 @@ const Img_url = 'https://image.tmdb.org/t/p/w500';
 
 const MoviesList = ({ data }) => {
   const location = useLocation();
-  console.log(data);
+  // console.log(data);
   return (
     <List>
       {data.map(({ title, id, poster_path, overview }, index) => (

@@ -1,8 +1,10 @@
-const Button = ({ SearchFormButton, LoadMore, children, onClick, type }) => {
+import { Styledbutton } from './StyledButton';
+
+const Button = ({ SearchFormButton, children, onClick, type }) => {
   return (
-    <button type={type} onClick={onClick}>
+    <Styledbutton type={type} onClick={onClick} SearchFormButton>
       {children}
-    </button>
+    </Styledbutton>
   );
 };
 

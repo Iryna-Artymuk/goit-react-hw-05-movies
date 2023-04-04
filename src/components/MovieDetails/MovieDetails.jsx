@@ -37,7 +37,7 @@ const MovieDetails = () => {
   }, [movieId, setMovieInfo]);
 
   const Img_url = 'https://image.tmdb.org/t/p/w500';
-  console.log(movieInfo);
+  // console.log(movieInfo);
   const { title, overview, runtime, release_date, genres } = movieInfo;
   return (
     <>
