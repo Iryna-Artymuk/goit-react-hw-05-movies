@@ -1,8 +1,9 @@
 import { Styledbutton } from './StyledButton';
 
-const Button = ({ SearchFormButton, children, onClick, type }) => {
+const Button = ({ ButtonType, children, onClick, type }) => {
+  // console.log(ButtonType);
   return (
-    <Styledbutton type={type} onClick={onClick} SearchFormButton>
+    <Styledbutton type={type} onClick={onClick} ButtonType={ButtonType}>
       {children}
     </Styledbutton>
   );

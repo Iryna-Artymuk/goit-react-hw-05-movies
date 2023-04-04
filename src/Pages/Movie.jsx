@@ -49,7 +49,14 @@ const Movies = () => {
     getMovies();
   }, [page, searchQuery]);
 
-  const handelClick = () => setPage(page + 1);
+  const handelClick = () => {
+    setPage(page + 1);
+  };
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   return (
     <>
       <SearchForm handelSubmit={handelSubmit} />
@@ -58,8 +65,8 @@ const Movies = () => {
         <>
           <MoviesList data={movies} />
           {movies.length > 0 && (
-            <Button type="button" onClick={handelClick}>
-              Load More{' '}
+            <Button type="button" onClick={handelClick} ButtonType="Load More">
+              Load More
             </Button>
           )}
         </>

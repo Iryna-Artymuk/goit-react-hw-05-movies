@@ -30,13 +30,13 @@ const SearchForm = ({ handelSubmit }) => {
       <Input
         type="text"
         placeholder="Search..."
-        required
+        // required
         value={inputValue}
         onChange={updateinputValue}
         autoComplete="off"
         autoFocus
       />
-      <Button type="submit" buttonType="SearchFormButton">
+      <Button type="submit" ButtonType="SearchFormButton">
         Search
       </Button>
     </Form>
